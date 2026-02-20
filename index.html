@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Luxury Hangman</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="game">
+  <header>
+    <h1>HANGMAN</h1>
+    <div class="stats">
+      <span>Score: <strong id="score">0</strong></span>
+      <span>Time: <strong id="time">60</strong>s</span>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="hangman-draw">
+      <svg viewBox="0 0 200 250">
+        <line x1="10" y1="240" x2="190" y2="240" />
+        <line x1="50" y1="240" x2="50" y2="20" />
+        <line x1="50" y1="20" x2="140" y2="20" />
+        <line x1="140" y1="20" x2="140" y2="40" />
+
+        <circle class="part" cx="140" cy="60" r="20" />
+        <line class="part" x1="140" y1="80" x2="140" y2="140" />
+        <line class="part" x1="140" y1="100" x2="110" y2="120" />
+        <line class="part" x1="140" y1="100" x2="170" y2="120" />
+        <line class="part" x1="140" y1="140" x2="115" y2="180" />
+        <line class="part" x1="140" y1="140" x2="165" y2="180" />
+      </svg>
+    </div>
+
+    <div class="game-info">
+      <p class="hint" id="hint"></p>
+      <div class="word" id="word"></div>
+      <div class="letters" id="letters"></div>
+    </div>
+  </div>
+
+  <button id="restart">Restart</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

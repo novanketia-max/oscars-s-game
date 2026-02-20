@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle, #111, #000);
+  color: #f5d27a;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 900px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 0 40px rgba(245,210,122,0.2);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  letter-spacing: 6px;
+}
+
+.stats span {
+  margin-left: 20px;
+}
+
+.content {
+  display: flex;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.hangman-draw svg {
+  width: 250px;
+  stroke: #f5d27a;
+  stroke-width: 4;
+  fill: none;
+}
+
+.part {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hint {
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.word {
+  font-size: 32px;
+  letter-spacing: 12px;
+  margin-bottom: 25px;
+}
+
+.letters {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.letters button {
+  background: transparent;
+  border: 1px solid #f5d27a;
+  color: #f5d27a;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.letters button:hover {
+  background: #f5d27a;
+  color: #000;
+}
+
+.letters button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+#restart {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #f5d27a;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
